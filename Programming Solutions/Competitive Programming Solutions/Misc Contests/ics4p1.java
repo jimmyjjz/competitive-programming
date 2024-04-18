@@ -1,0 +1,37 @@
+import java.util.*;
+import java.io.*;
+public class permute {
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static StringTokenizer st;
+	  public static Set<String> permutes(String in){
+	    Set<String> process = new TreeSet<String>();
+	    if (in.length() == 1){
+	    	process.add(in);
+	    }
+	    else {
+	      for (int i = 0; i<in.length(); i++){
+	        for (String make : permutes(in.substring(0, i)+in.substring(i+1))){
+	        	process.add(in.charAt(i) + make);
+	        }
+	      }
+	    }
+	    return process;
+	  }
+	public static void main(String[] args) throws IOException{
+		    for (String out : permutes(readLine())){
+		      System.out.println(out);
+		      
+		    }
+	}
+	static String next () throws IOException {
+		while (st == null || !st.hasMoreTokens())
+			st = new StringTokenizer(br.readLine().trim());
+		return st.nextToken();
+	}
+	static int readInt () throws IOException {
+		return Integer.parseInt(next());
+	}
+	static String readLine () throws IOException {
+		return br.readLine().trim();
+	}
+}
