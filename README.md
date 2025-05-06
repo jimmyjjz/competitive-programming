@@ -1,3 +1,3 @@
-Contains my solutions from coding challenges and a multitude of contests like CCC, USACO, COCI, DMOPC, DWITE and CCO. 
+Contains my solutions for problems originating from DMOJ, AOC, and a multitude of contests like CCC, USACO, COCI, DMOPC, DWITE and CCO. 
 
-My solutions are written in Java and C++(on one occasion Python).
+Solutions are written in Java or C++(one occasion Python).
